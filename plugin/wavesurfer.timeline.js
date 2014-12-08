@@ -45,6 +45,12 @@
 
         createWrapper: function () {
             var wsParams = this.wavesurfer.params;
+            
+			// clear contents of timeline container
+			while (this.container.lastChild) {
+					this.container.removeChild(this.container.lastChild);
+			}
+            
             this.wrapper = this.container.appendChild(
                 document.createElement('wave')
             );
